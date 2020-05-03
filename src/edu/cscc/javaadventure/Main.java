@@ -1,20 +1,30 @@
 package edu.cscc.javaadventure;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("The adventure begins!");
 
-        Character character = new Character();
-        character.setName("Gandalf");
-        character.setDescription("The Gray Wizard");
-        character.setHealth(100);
+        Character wizard = new Character("Gandalf");
+        Character fighter = new Character("Gimli");
+        Character ringBearer = new Character("Frodo");
 
-        String name = character.getName();
-        String description = character.getDescription();
-        Integer health = character.getHealth();
+        Party party = new Party();
+        party.addMember(wizard);
+        party.addMember(fighter);
+        party.addMember(ringBearer);
 
-        System.out.println(name);
-        System.out.println(description);
-        System.out.println(health);
+        List<Character> members = party.getMembers();
+        System.out.println("Party size: " + party.size());
+        for (Character character : members) {
+            System.out.println(character.getName());
+        }
+
+        Character gandalf = party.findMember(wizard.getName());
+        System.out.println("Found: " + gandalf.getName());
+        party.removeMember(gandalf.getName());
+
+        System.out.println("Party size: " + party.size());
     }
 }

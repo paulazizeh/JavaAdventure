@@ -1,5 +1,7 @@
 package edu.cscc.javaadventure;
 
+import java.util.Objects;
+
 public class Character {
 
     private String name;
@@ -15,6 +17,10 @@ public class Character {
     private Integer health;
 
     public Character() {
+    }
+
+    public Character(String name) {
+        this.name = name;
     }
 
     public Character(String name, String description, Integer age, String gender, Integer strength, Integer dexterity,
@@ -118,5 +124,18 @@ public class Character {
 
     public void setHealth(Integer health) {
         this.health = health;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Character character = (Character) o;
+        return name.equals(character.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
