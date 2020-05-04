@@ -1,4 +1,4 @@
-package com.cscc.javaadventure;
+package edu.cscc.javaadventure;
 
 public class Main {
     public static void main(String[] args) {
