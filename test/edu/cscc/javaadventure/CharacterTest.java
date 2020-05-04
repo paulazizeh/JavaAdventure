@@ -1,4 +1,4 @@
-package com.cscc.javaadventure;
+package edu.cscc.javaadventure;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
