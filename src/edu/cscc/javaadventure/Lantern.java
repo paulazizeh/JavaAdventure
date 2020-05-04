@@ -1,4 +1,4 @@
-package com.cscc.javaadventure;
+package edu.cscc.javaadventure;
 
 /**
  * Represents a lantern in a role-playing game.

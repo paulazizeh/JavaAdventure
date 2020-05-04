@@ -1,4 +1,4 @@
-package com.cscc.javaadventure;
+package edu.cscc.javaadventure;
 
 /**
  * Represents a treasure chest in a role-playing game.
