@@ -8,10 +8,10 @@ import java.util.*;
  * of the party. Party members must have unique names.
  */
 public class Party {
-    private HashSet<Character> members;
+    private HashMap<String, Character> members;
 
     public Party() {
-        members = new HashSet<>();
+        members = new HashMap<>();
     }
 
     /**
@@ -20,7 +20,7 @@ public class Party {
      * @param character
      */
     public void addMember(Character character) {
-        members.add(character);
+        members.put(character.getName(), character);
     }
 
     /**
@@ -29,14 +29,7 @@ public class Party {
      * @return The removed member, or null if they are not in the party.
      */
     public Character removeMember(String name) {
-        for (Character member : members) {
-            if (name.equals(member.getName())) {
-                members.remove(member);
-                return member;
-            }
-        }
-
-        return null;
+        return members.remove(name);
     }
 
     /**
@@ -53,13 +46,7 @@ public class Party {
      * @return The found member, or null if they could not be found.
      */
     public Character findMember(String name) {
-        for (Character member : members) {
-            if (name.equals(member.getName())) {
-                return member;
-            }
-        }
-
-        return null;
+        return members.get(name);
     }
 
     /**
@@ -67,9 +54,9 @@ public class Party {
      * @return A List of Characters who are members of the party.
      */
     public List<Character> getMembers() {
-        ArrayList<Character> memberList = new ArrayList<>();
-        memberList.addAll(members);
+        ArrayList<Character> characters = new ArrayList<>();
+        characters.addAll(members.values());
 
-        return memberList;
+        return characters;
     }
 }
