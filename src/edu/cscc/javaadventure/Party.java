@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Represents a party of adventures in the JavaAdventure game.
  * Party can add, remove, find, and get members, as well as determining the size
- * of the party. Members of a party must be unique.
+ * of the party. Party members must have unique names.
  */
 public class Party {
     private HashSet<Character> members;
