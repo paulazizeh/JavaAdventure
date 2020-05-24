@@ -9,7 +9,10 @@ public class Main {
         Character wizard = new Character("Gandalf");
         Character fighter = new Character("Gimli");
         Character ringBearer = new Character("Frodo");
+
         Party party = new Party();
+        party.onAddPartyMember(character -> System.out.println(character.getName() + " has been added."));
+        party.onRemovePartyMember(character -> System.out.println(character.getName() + " has been removed."));
 
         Scanner scanner = new Scanner(System.in);
         boolean done = false;
@@ -42,6 +45,10 @@ public class Main {
                     party.addMember(ringBearer);
             }
         } while(!done);
+
+        Character gandalf = party.findMember(wizard.getName());
+        System.out.println("Found: " + gandalf.getName());
+        party.removeMember(gandalf.getName());
 
         System.out.println("Party size: " + party.size());
         for (Character member: party.getMembers()) {

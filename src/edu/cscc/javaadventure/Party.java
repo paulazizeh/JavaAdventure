@@ -9,6 +9,8 @@ import java.util.*;
  */
 public class Party {
     private HashMap<String, Character> members;
+    private AddPartyMemberEvent addPartyMemberEvent;
+    private RemovePartyMemberEvent removePartyMemberEvent;
 
     public Party() {
         members = new HashMap<>();
@@ -21,6 +23,11 @@ public class Party {
      */
     public void addMember(Character character) {
         members.put(character.getName(), character);
+        addPartyMemberEvent.onEvent(character);
+    }
+
+    public void onAddPartyMember(AddPartyMemberEvent addPartyMemberEvent) {
+        this.addPartyMemberEvent = addPartyMemberEvent;
     }
 
     /**
@@ -30,8 +37,15 @@ public class Party {
      */
     public Character removeMember(String name) {
         Character removed = members.remove(name);
+        if (removed != null) {
+            removePartyMemberEvent.onEvent(removed);
+        }
 
         return removed;
+    }
+
+    public void onRemovePartyMember(RemovePartyMemberEvent removePartyMemberEvent) {
+        this.removePartyMemberEvent = removePartyMemberEvent;
     }
 
     /**
