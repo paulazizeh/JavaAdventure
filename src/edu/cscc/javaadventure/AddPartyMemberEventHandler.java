@@ -1,6 +1,5 @@
 package edu.cscc.javaadventure;
 
-public interface AddPartyMemberEvent {
-
+public interface AddPartyMemberEventHandler {
     void onEvent(Character memberAdded);
 }

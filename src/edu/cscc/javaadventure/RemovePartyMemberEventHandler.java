@@ -1,5 +1,5 @@
 package edu.cscc.javaadventure;
 
-public interface RemovePartyMemberEvent {
+public interface RemovePartyMemberEventHandler {
     void onEvent(Character member);
 }
