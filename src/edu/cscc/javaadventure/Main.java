@@ -1,5 +1,9 @@
 package edu.cscc.javaadventure;
 
+import edu.cscc.javaadventure.engine.GameEngine;
+import edu.cscc.javaadventure.engine.GameMap;
+import edu.cscc.javaadventure.engine.GameState;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -73,5 +77,21 @@ public class Main {
                 .filter(object -> object.name.equals("The One Ring"))
                 .findFirst()
                 .ifPresent(found -> System.out.println("Found: " + found.getName()));
+        System.out.println("Party size: " + party.size());
+
+//        Room map = GameMap.buildMap();
+//        GameState gameState = new GameState(party, map, true);
+//        Scanner scanner = new Scanner(System.in);
+//        while(gameState.isPlaying()) {
+//            System.out.println(gameState.getCurrentDescription());
+//            gameState = GameEngine.tick(gameState, () -> {
+//                System.out.print("Command: ");
+//                return scanner.nextLine();
+//            }, (message) -> {
+//                System.out.println(message);
+//            });
+//        }
+
+        System.out.println("Goodbye.");
     }
 }
