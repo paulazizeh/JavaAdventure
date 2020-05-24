@@ -23,7 +23,9 @@ public class Party {
      */
     public void addMember(Character character) {
         members.put(character.getName(), character);
-        addPartyMemberEventHandler.onEvent(character);
+        if (addPartyMemberEventHandler != null) {
+            addPartyMemberEventHandler.onEvent(character);
+        }
     }
 
     public void onAddPartyMember(AddPartyMemberEventHandler addPartyMemberEventHandler) {
@@ -37,7 +39,7 @@ public class Party {
      */
     public Character removeMember(String name) {
         Character removed = members.remove(name);
-        if (removed != null) {
+        if (removed != null && removePartyMemberEventHandler != null) {
             removePartyMemberEventHandler.onEvent(removed);
         }
 
