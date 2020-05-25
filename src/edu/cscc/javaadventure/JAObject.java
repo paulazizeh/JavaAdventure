@@ -1,5 +1,6 @@
 package edu.cscc.javaadventure;
 
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,9 +13,50 @@ public abstract class JAObject {
     protected String description;
     protected Double weight;
     protected UUID uuid;
+    protected HashMap<String, String> descriptionModifiers;
 
     public JAObject() {
         this.uuid = UUID.randomUUID();
+        descriptionModifiers = new HashMap<>();
+        setupDescriptionModifiers();
+    }
+
+    protected abstract void setupDescriptionModifiers();
+
+    // Add a description modifier entry to the HashMap
+    public void addDescriptionModifier(String modifierName, String modifierValue) {
+        this.descriptionModifiers.put(modifierName, modifierValue);
+    }
+    // Remove a description modifier entry from the HashMap
+    public void removeDescriptionModifier(String modifierName) {
+        this.descriptionModifiers.remove(modifierName);
+    }
+    // Clear the description modifier HashMap of all entries
+    public void clearDescriptionModifiers() {
+        this.descriptionModifiers.clear();
+    }
+
+    public String getDescription() {
+        // Any class which extends JAObject must implement setupModifiers
+        // This function asks the object to generate a collection of
+        // description modifiers based on its state (such as open or closed,
+        // lit or unlit, etc). The getDescription method then appends those
+        // description modifiers to the base description, generating a
+        // complete description of the object.
+        setupDescriptionModifiers();
+
+        // The full description begins as being the same as the base description
+        String fullDescription = this.description;
+
+        // For each key in the descriptionModifiers HashMap, retrieve the
+        // value. Those values are modifiers to the description such as
+        // "It is lit." Append all the modifiers to the base description
+        // making sure to include a space between each one.
+        for (String modifierKey : this.descriptionModifiers.keySet()) {
+            fullDescription += " " + this.descriptionModifiers.get(modifierKey);
+        }
+
+        return fullDescription;
     }
 
     /**
@@ -36,10 +78,6 @@ public abstract class JAObject {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public void setDescription(String description) {

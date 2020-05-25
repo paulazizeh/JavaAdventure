@@ -21,6 +21,33 @@ public class TreasureChest extends JAObject {
         this.locked = true;
     }
 
+    public void setupDescriptionModifiers() {
+        // String Constants
+        String openModifierKey = "OPENMODIFIER";
+        String openModifierValue = "It lies open.";
+        String closedModifierKey = "CLOSEDMODIFIERE";
+        String closedModifierValue = "It is closed.";
+        String lockedModifierKey = "LOCKEDMODIFIER";
+        String lockedModifierValue = "It is tightly locked.";
+        String unlockedModifierKey = "UNLOCKEDMODIFIER";
+        String unlockedModifierValue = "It is unlocked.";
+
+        this.clearDescriptionModifiers();
+
+        if (this.isOpen()) {
+            this.addDescriptionModifier(openModifierKey, openModifierValue);
+        } else {
+            this.addDescriptionModifier(closedModifierKey, closedModifierValue);
+        }
+
+        if (this.isLocked()) {
+            this.addDescriptionModifier(lockedModifierKey, lockedModifierValue);
+        } else {
+            this.addDescriptionModifier(unlockedModifierKey, unlockedModifierValue);
+        }
+    }
+
+
     /**
      * Indicates if the treasure chest is open or not.
      * @return true if it is open (which also implies it is unlocked), false otherwise.
@@ -73,17 +100,5 @@ public class TreasureChest extends JAObject {
      */
     public void close() {
         this.open = false;
-    }
-
-    /**
-     * Retrieves the description of the chest.
-     * @return The description of the chest, which is based on whether it is locked or not.
-     */
-    public String getDescription() {
-        return "A sturdy iron chest. " + getLockDescription();
-    }
-
-    private String getLockDescription() {
-        return this.locked ? "It is locked." : "It is unlocked.";
     }
 }

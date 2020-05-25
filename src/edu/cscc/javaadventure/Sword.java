@@ -11,6 +11,11 @@ public class Sword extends JAObject {
         this.twoHanded = true;
     }
 
+    @Override
+    protected void setupDescriptionModifiers() {
+        //Do nothing.
+    }
+
     public Integer getDamage() {
         return damage;
     }

@@ -35,6 +35,11 @@ public class Character extends JAObject {
         this.health = health;
     }
 
+    @Override
+    protected void setupDescriptionModifiers() {
+        //Do nothing.
+    }
+
     public Integer getAge() {
         return age;
     }

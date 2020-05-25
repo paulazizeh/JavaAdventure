@@ -39,16 +39,26 @@ public class Lantern extends JAObject {
         this.lit = false;
     }
 
-    /**
-     * Get the description of the lantern. Indicates of the lantern is lit or not.
-     * @return The lantern description depending on if it is lit or not.
-     */
-    public String getDescription() {
-        return "A tarnished, old lantern that has seen better days. " + getLitDescription();
-    }
+    // Mandatory implementation of the abstract method
+    // on JAObject. This method looks at the state of
+    // the lantern (lit or unlit) and builds
+    // the descriptionModifiers HashMap. The getDescription()
+    // method on JAObject relies on this method to generate
+    // an accurate description.
+    public void setupDescriptionModifiers() {
+        // String Constants
+        String litModifierKey = "LITMODIFIER";
+        String litModifierValue = "It glows softly.";
+        String unlitModifierKey = "UNLITMODIFIER";
+        String unlitModifierValue = "It is unlit.";
 
-    private String getLitDescription() {
-        return !lit ? "It is unlit." : "It glows softly.";
+        this.clearDescriptionModifiers();
+
+        if (this.isLit()) {
+            this.addDescriptionModifier(litModifierKey, litModifierValue);
+        } else {
+            this.addDescriptionModifier(unlitModifierKey, unlitModifierValue);
+        }
     }
 
     /**

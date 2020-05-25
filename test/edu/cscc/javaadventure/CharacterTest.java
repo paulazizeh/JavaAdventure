@@ -12,7 +12,7 @@ class CharacterTest {
     @BeforeEach
     void setUp() {
         character = new Character("Radagast","The Brown Wizard", 100, "male", 10, 12,
-                11, 16, 18, 12, 35);
+                11, 16, 18, 12, 35, 5.0);
     }
 
     @Test
