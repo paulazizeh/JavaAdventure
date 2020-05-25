@@ -2,10 +2,8 @@ package edu.cscc.javaadventure;
 
 import java.util.Objects;
 
-public class Character {
+public class Character extends JAObject {
 
-    private String name;
-    private String description;
     private Integer age;
     private String gender;
     private Integer strength;
@@ -20,13 +18,12 @@ public class Character {
     }
 
     public Character(String name) {
-        this.name = name;
+        super(name, null, null);
     }
 
     public Character(String name, String description, Integer age, String gender, Integer strength, Integer dexterity,
-                     Integer constitution, Integer intelligence, Integer wisdom, Integer charisma, Integer health) {
-        this.name = name;
-        this.description = description;
+                     Integer constitution, Integer intelligence, Integer wisdom, Integer charisma, Integer health, Double weight) {
+        super(name, description, weight);
         this.age = age;
         this.gender = gender;
         this.strength = strength;
@@ -36,22 +33,6 @@ public class Character {
         this.wisdom = wisdom;
         this.charisma = charisma;
         this.health = health;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Integer getAge() {
@@ -131,7 +112,7 @@ public class Character {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Character character = (Character) o;
-        return name.equals(character.name);
+        return this.name.equals(character.name);
     }
 
     @Override

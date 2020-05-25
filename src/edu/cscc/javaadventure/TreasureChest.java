@@ -8,8 +8,7 @@ package edu.cscc.javaadventure;
  * A treasure chest also has a weight and a description. The description is
  * different depending on if the chest is locked or not.
  */
-public class TreasureChest {
-    private double weight;
+public class TreasureChest extends JAObject {
     private boolean open;
     private boolean locked;
 
@@ -18,16 +17,8 @@ public class TreasureChest {
      * and is locked and closed by default.
      */
     public TreasureChest() {
-        this.weight = 10.00;
+        super(null, null, 10.00);
         this.locked = true;
-    }
-
-    /**
-     * Returns the weight of the treasure chest.
-     * @return The weight of the treasure chest to a precision of two decimal places.
-     */
-    public double getWeight() {
-        return weight;
     }
 
     /**

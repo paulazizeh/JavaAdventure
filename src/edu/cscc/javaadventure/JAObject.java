@@ -1,15 +1,21 @@
 package edu.cscc.javaadventure;
 
 import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Represents a generic object in the Java Adventure game.
  */
-public class JAObject {
+public abstract class JAObject {
 
-    private String name;
-    private String description;
-    private double weight;
+    protected String name;
+    protected String description;
+    protected Double weight;
+    protected UUID uuid;
+
+    public JAObject() {
+        this.uuid = UUID.randomUUID();
+    }
 
     /**
      * Construct a new JAObject.
@@ -17,10 +23,11 @@ public class JAObject {
      * @param description The description of the object.
      * @param weight The weight of the object.
      */
-    public JAObject(String name, String description, double weight) {
+    public JAObject(String name, String description, Double weight) {
         this.name = name;
         this.description = description;
         this.weight = weight;
+        this.uuid = UUID.randomUUID();
     }
 
     public String getName() {
@@ -39,11 +46,11 @@ public class JAObject {
         this.description = description;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
@@ -60,5 +67,9 @@ public class JAObject {
     @Override
     public int hashCode() {
         return Objects.hash(name, description, weight);
+    }
+
+    public UUID getUuid() {
+        return uuid;
     }
 }

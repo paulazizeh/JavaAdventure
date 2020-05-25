@@ -5,9 +5,8 @@ package edu.cscc.javaadventure;
  * The lantern can be lit or extinguished, broken or fixed.
  * It also has a weight and a description.
  */
-public class Lantern {
+public class Lantern extends JAObject {
     private boolean lit;
-    private double weight;
     private boolean broken;
 
     /**
@@ -15,7 +14,7 @@ public class Lantern {
      * By default the lantern is unlit, unbroken, and has a weight of 1.50.
      */
     public Lantern() {
-        weight = 1.50;
+        super(null, null, 1.5);
     }
 
     /**
@@ -50,14 +49,6 @@ public class Lantern {
 
     private String getLitDescription() {
         return !lit ? "It is unlit." : "It glows softly.";
-    }
-
-    /**
-     * Gets the lantern's weight.
-     * @return The weight of the lantern to a precision of 2 decimal places.
-     */
-    public double getWeight() {
-        return weight;
     }
 
     /**
