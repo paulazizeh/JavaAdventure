@@ -47,17 +47,15 @@ public class Lantern extends JAObject {
     // an accurate description.
     public void setupDescriptionModifiers() {
         // String Constants
-        String litModifierKey = "LITMODIFIER";
         String litModifierValue = "It glows softly.";
-        String unlitModifierKey = "UNLITMODIFIER";
         String unlitModifierValue = "It is unlit.";
 
         this.clearDescriptionModifiers();
 
         if (this.isLit()) {
-            this.addDescriptionModifier(litModifierKey, litModifierValue);
+            this.addDescriptionModifier(ModifierName.LIT_MODIFIER, litModifierValue);
         } else {
-            this.addDescriptionModifier(unlitModifierKey, unlitModifierValue);
+            this.addDescriptionModifier(ModifierName.UNLIT_MODIFIER, unlitModifierValue);
         }
     }
 

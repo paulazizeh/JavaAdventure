@@ -23,27 +23,23 @@ public class TreasureChest extends JAObject {
 
     public void setupDescriptionModifiers() {
         // String Constants
-        String openModifierKey = "OPENMODIFIER";
         String openModifierValue = "It lies open.";
-        String closedModifierKey = "CLOSEDMODIFIERE";
         String closedModifierValue = "It is closed.";
-        String lockedModifierKey = "LOCKEDMODIFIER";
         String lockedModifierValue = "It is tightly locked.";
-        String unlockedModifierKey = "UNLOCKEDMODIFIER";
         String unlockedModifierValue = "It is unlocked.";
 
         this.clearDescriptionModifiers();
 
         if (this.isOpen()) {
-            this.addDescriptionModifier(openModifierKey, openModifierValue);
+            this.addDescriptionModifier(ModifierName.OPEN_MODIFIER, openModifierValue);
         } else {
-            this.addDescriptionModifier(closedModifierKey, closedModifierValue);
+            this.addDescriptionModifier(ModifierName.CLOSED_MODIFIER, closedModifierValue);
         }
 
         if (this.isLocked()) {
-            this.addDescriptionModifier(lockedModifierKey, lockedModifierValue);
+            this.addDescriptionModifier(ModifierName.LOCKED_MODIFIER, lockedModifierValue);
         } else {
-            this.addDescriptionModifier(unlockedModifierKey, unlockedModifierValue);
+            this.addDescriptionModifier(ModifierName.UNLOCKED_MODIFIER, unlockedModifierValue);
         }
     }
 

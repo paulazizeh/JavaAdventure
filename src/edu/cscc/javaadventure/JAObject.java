@@ -1,5 +1,7 @@
 package edu.cscc.javaadventure;
 
+import com.sun.org.apache.bcel.internal.generic.MONITORENTER;
+
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.UUID;
@@ -13,7 +15,7 @@ public abstract class JAObject {
     protected String description;
     protected Double weight;
     protected UUID uuid;
-    protected HashMap<String, String> descriptionModifiers;
+    protected HashMap<ModifierName, String> descriptionModifiers;
 
     public JAObject() {
         this.uuid = UUID.randomUUID();
@@ -21,14 +23,23 @@ public abstract class JAObject {
         setupDescriptionModifiers();
     }
 
+    public enum ModifierName {
+        OPEN_MODIFIER,
+        CLOSED_MODIFIER,
+        LOCKED_MODIFIER,
+        UNLOCKED_MODIFIER,
+        LIT_MODIFIER,
+        UNLIT_MODIFIER
+    }
+
     protected abstract void setupDescriptionModifiers();
 
     // Add a description modifier entry to the HashMap
-    public void addDescriptionModifier(String modifierName, String modifierValue) {
+    public void addDescriptionModifier(ModifierName modifierName, String modifierValue) {
         this.descriptionModifiers.put(modifierName, modifierValue);
     }
     // Remove a description modifier entry from the HashMap
-    public void removeDescriptionModifier(String modifierName) {
+    public void removeDescriptionModifier(ModifierName modifierName) {
         this.descriptionModifiers.remove(modifierName);
     }
     // Clear the description modifier HashMap of all entries
@@ -52,7 +63,7 @@ public abstract class JAObject {
         // value. Those values are modifiers to the description such as
         // "It is lit." Append all the modifiers to the base description
         // making sure to include a space between each one.
-        for (String modifierKey : this.descriptionModifiers.keySet()) {
+        for (ModifierName modifierKey : this.descriptionModifiers.keySet()) {
             fullDescription += " " + this.descriptionModifiers.get(modifierKey);
         }
 
