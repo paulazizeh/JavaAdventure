@@ -20,7 +20,6 @@ public abstract class JAObject {
     public JAObject() {
         this.uuid = UUID.randomUUID();
         descriptionModifiers = new HashMap<>();
-        setupDescriptionModifiers();
     }
 
     public enum ModifierName {
@@ -47,13 +46,13 @@ public abstract class JAObject {
         this.descriptionModifiers.clear();
     }
 
+    // Any class which extends JAObject must implement setupModifiers
+    // This function asks the object to generate a collection of
+    // description modifiers based on its state (such as open or closed,
+    // lit or unlit, etc). The getDescription method then appends those
+    // description modifiers to the base description, generating a
+    // complete description of the object.
     public String getDescription() {
-        // Any class which extends JAObject must implement setupModifiers
-        // This function asks the object to generate a collection of
-        // description modifiers based on its state (such as open or closed,
-        // lit or unlit, etc). The getDescription method then appends those
-        // description modifiers to the base description, generating a
-        // complete description of the object.
         setupDescriptionModifiers();
 
         // The full description begins as being the same as the base description
