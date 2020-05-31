@@ -2,7 +2,7 @@ package edu.cscc.javaadventure;
 
 import java.util.Objects;
 
-public class Character extends JAObject {
+public class Character extends JAObject implements Comparable<Character> {
 
     private Integer age;
     private String gender;
@@ -33,6 +33,11 @@ public class Character extends JAObject {
         this.wisdom = wisdom;
         this.charisma = charisma;
         this.health = health;
+    }
+
+    @Override
+    public int compareTo(Character otherCharacter) {
+        return this.name.compareTo(otherCharacter.getName());
     }
 
     @Override
