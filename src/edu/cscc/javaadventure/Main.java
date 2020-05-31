@@ -45,11 +45,9 @@ public class Main {
             }
         } while(!done);
 
-        List<Character> members = party.getMembers();
         System.out.println("Party size: " + party.size());
-        Collections.sort(members);
-        for (Character character : members) {
-            System.out.println(character.getName());
+        for (Character member: party) {
+            System.out.println(member.getName());
         }
     }
 }

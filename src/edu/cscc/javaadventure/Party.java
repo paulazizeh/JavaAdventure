@@ -7,7 +7,7 @@ import java.util.*;
  * Party can add, remove, find, and get members, as well as determining the size
  * of the party. Party members must have unique names.
  */
-public class Party {
+public class Party implements Iterable<Character> {
     private HashMap<String, Character> members;
 
     public Party() {
@@ -36,7 +36,7 @@ public class Party {
      * Returns the count of party members.
      * @return The number of members in the party.
      */
-    public int size() {
+    public Integer size() {
         return members.size();
     }
 
@@ -58,5 +58,10 @@ public class Party {
         characters.addAll(members.values());
 
         return characters;
+    }
+
+    @Override
+    public Iterator<Character> iterator() {
+        return members.values().iterator();
     }
 }
