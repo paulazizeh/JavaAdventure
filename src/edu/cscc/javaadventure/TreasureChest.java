@@ -78,16 +78,19 @@ public class TreasureChest extends JAObject {
 
     /**
      * Opens the chest if it is unlocked.
-     * @return true if the chest is unlocked, false otherwise.
+     * @throws ChestLockedException if the chest is locked.
+     * @throws ChestAlreadyOpenException if the chest is already open
      */
-    public boolean open() {
+    public void open() throws ChestLockedException, ChestAlreadyOpenException {
+        if (this.open) {
+            throw new ChestAlreadyOpenException();
+        }
+
         if (this.locked) {
-            return false;
+            throw new ChestLockedException();
         }
 
         this.open = true;
-
-        return this.open;
     }
 
     /**
