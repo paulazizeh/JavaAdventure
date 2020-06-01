@@ -1,7 +1,5 @@
 package edu.cscc.javaadventure;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -48,6 +46,16 @@ public class Main {
         System.out.println("Party size: " + party.size());
         for (Character member: party) {
             System.out.println(member.getName());
+        }
+
+        TreasureChest treasureChest = new TreasureChest();
+        try {
+            treasureChest.open();
+            treasureChest.lock();
+        } catch (ChestLockedException e) {
+            System.out.println("Oops, the chest is already locked.");
+        } catch (ChestAlreadyOpenException e) {
+            System.out.println("Oops, the chest is already open.");
         }
     }
 }

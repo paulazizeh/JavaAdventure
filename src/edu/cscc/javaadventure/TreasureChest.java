@@ -62,11 +62,11 @@ public class TreasureChest extends JAObject {
 
     /**
      * Locks the chest. It also closes the chest if it was open.
-     * @throws ChestAlreadyLockedException if the chest is already locked.
+     * @throws ChestLockedException if the chest is already locked.
      */
-    public void lock() throws ChestAlreadyLockedException {
+    public void lock() throws ChestLockedException {
         if (this.locked) {
-            throw new ChestAlreadyLockedException();
+            throw new ChestLockedException();
         }
         this.locked = true;
         this.close();
