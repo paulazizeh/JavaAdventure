@@ -47,15 +47,5 @@ public class Main {
         for (Character member: party) {
             System.out.println(member.getName());
         }
-
-        TreasureChest treasureChest = new TreasureChest();
-        try {
-            treasureChest.open();
-            treasureChest.lock();
-        } catch (ChestLockedException e) {
-            System.out.println("Oops, the chest is already locked.");
-        } catch (ChestAlreadyOpenException e) {
-            System.out.println("Oops, the chest is already open.");
-        }
     }
 }
