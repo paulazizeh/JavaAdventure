@@ -27,7 +27,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../JavaAdventureLib/build/libs/proguard-JavaAdventureLib.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/proguard-JavaAdventureLib.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
