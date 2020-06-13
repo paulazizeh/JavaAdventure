@@ -73,4 +73,10 @@ public interface Combatant extends Comparable<Combatant> {
      * @return true if the combatant can still fight, false otherwise.
      */
     boolean isActiveCombatant();
+
+    /**
+     * Gets the name of the combatant.
+     * @return The name of the combatant.
+     */
+    String getName();
 }
