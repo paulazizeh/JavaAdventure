@@ -1,8 +1,8 @@
 package edu.cscc.javaadventure;
 
 import edu.cscc.javaadventure.engine.GameEngine;
-import edu.cscc.javaadventure.engine.GameMap;
 import edu.cscc.javaadventure.engine.GameState;
+import edu.cscc.javaadventure.engine.combat.Goblin;
 
 import java.util.Arrays;
 import java.util.List;
@@ -79,8 +79,25 @@ public class Main {
                 .ifPresent(found -> System.out.println("Found: " + found.getName()));
         System.out.println("Party size: " + party.size());
 
-//        Room map = GameMap.buildMap();
-//        GameState gameState = new GameState(party, map, true);
+//        Room room = new Room("A dark room.", "You are likely to be eaten by a grue.");
+//
+//        try {
+//            TreasureChest treasureChest = new TreasureChest();
+//            treasureChest.unlock();
+//            treasureChest.open();
+//            treasureChest.addObject(new BasicObject("gold", "a big pile of gold", 1.0));
+//            treasureChest.lock();
+//            room.addToContents(treasureChest);
+//        } catch (ChestAlreadyOpenException e) {
+//            e.printStackTrace();
+//        } catch (ChestLockedException e) {
+//            e.printStackTrace();
+//        }
+//        room.addToContents(new Goblin());
+//        Room hallway = new Room("hallway", "A cobweb strewn hallway.");
+//        hallway.addToContents(new Lantern());
+//        room.connectRoom(Room.SOUTH, hallway);
+//        GameState gameState = new GameState(party, room, true);
 //        Scanner scanner = new Scanner(System.in);
 //        while(gameState.isPlaying()) {
 //            System.out.println(gameState.getCurrentDescription());
