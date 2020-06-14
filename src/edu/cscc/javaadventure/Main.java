@@ -44,7 +44,7 @@ public class Main {
         } while(!done);
 
         System.out.println("Party size: " + party.size());
-        for (Character member: party) {
+        for (Character member: party.getMembers()) {
             System.out.println(member.getName());
         }
     }
