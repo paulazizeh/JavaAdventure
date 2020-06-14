@@ -13,6 +13,11 @@ public class Main {
         Party party = new Party();
         party.onAddPartyMember(character -> System.out.println(character.getName() + " has been added."));
         party.onRemovePartyMember(character -> System.out.println(character.getName() + " has been removed."));
+        party.onMemberTake((memberName, target) -> {
+            Character character = party.findMember(memberName);
+            character.getBackpack().addObject(target);
+            System.out.println(character.getName() + " added " + target.getName() + " to their backpack.");
+        });
 
         Scanner scanner = new Scanner(System.in);
         boolean done = false;
@@ -46,13 +51,18 @@ public class Main {
             }
         } while(!done);
 
-        Character gandalf = party.findMember(wizard.getName());
-        System.out.println("Found: " + gandalf.getName());
-        party.removeMember(gandalf.getName());
-
         System.out.println("Party size: " + party.size());
         for (Character member: party.getMembers()) {
             System.out.println(member.getName());
         }
+
+        JAObject someGold = new JAObject() {
+            @Override
+            protected void setupDescriptionModifiers() {
+
+            }
+        };
+        someGold.setName("Some gold");
+        party.memberTake(ringBearer.getName(), someGold);
     }
 }

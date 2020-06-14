@@ -1,6 +1,8 @@
 package edu.cscc.javaadventure;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Represents a party of adventures in the JavaAdventure game.
@@ -11,6 +13,7 @@ public class Party {
     private HashMap<String, Character> members;
     private AddPartyMemberEventHandler addPartyMemberEventHandler;
     private RemovePartyMemberEventHandler removePartyMemberEventHandler;
+    private MemberTakeHandler memberTakeHandler;
 
     public Party() {
         members = new HashMap<>();
@@ -76,5 +79,13 @@ public class Party {
         characters.addAll(members.values());
 
         return characters;
+    }
+
+    public void onMemberTake(MemberTakeHandler memberTakeHandler) {
+        this.memberTakeHandler = memberTakeHandler;
+    }
+
+    public void memberTake(String memberName, JAObject target) {
+        this.memberTakeHandler.onMemberTake(memberName, target);
     }
 }
