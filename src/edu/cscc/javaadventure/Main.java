@@ -1,5 +1,6 @@
 package edu.cscc.javaadventure;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -56,14 +57,21 @@ public class Main {
         List<Character> members = party.getMembers();
         members.stream().map(character -> character.getName()).forEach(System.out::println);
 
-
-        JAObject someGold = new JAObject() {
-            @Override
-            protected void setupDescriptionModifiers() {
-
-            }
-        };
-        someGold.setName("Some gold");
+        BasicObject someGold = new BasicObject("Some gold", "shiny gold coins", 0.5);
         party.memberTake(ringBearer.getName(), someGold);
+
+        List<BasicObject> objects = Arrays.asList(
+                new BasicObject("The One Ring", "A heavy gold ring", 0.5),
+                new BasicObject("Lambas Bread", "Elven bread. Good for eating on the go.", 0.1),
+                new BasicObject("Cookware", "Some pots and pans for cooking", 2.0)
+                );
+        objects.forEach((object) -> party.memberTake("Frodo", object));
+        System.out.println("Searching for The One Ring");
+        ringBearer.getBackpack()
+                .getContents()
+                .stream()
+                .filter(object -> object.name.equals("The One Ring"))
+                .findFirst()
+                .ifPresent(found -> System.out.println("Found: " + found.getName()));
     }
 }
