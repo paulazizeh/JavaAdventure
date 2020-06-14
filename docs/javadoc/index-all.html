@@ -30,7 +30,8 @@
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="edu/cscc/javaadventure/package-summary.html">Package</a></li>
+<li><a href="overview-summary.html">Overview</a></li>
+<li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
 <li><a href="deprecated-list.html">Deprecated</a></li>
@@ -85,6 +86,14 @@
 <dd>
 <div class="block">Add an object to the contents of this room.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#attack-int-edu.cscc.javaadventure.engine.combat.Combatant-">attack(int, Combatant)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Attack another combatant.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#attack-int-edu.cscc.javaadventure.engine.combat.Combatant-">attack(int, Combatant)</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Attack another combatant.</div>
+</dd>
 </dl>
 <a name="I:B">
 <!--   -->
@@ -105,6 +114,12 @@
 </a>
 <h2 class="title">C</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#calculateInitiative-int-">calculateInitiative(int)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#calculateInitiative-int-">calculateInitiative(int)</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Initiative represents the order in which combatants can act in a turn-based game.</div>
+</dd>
 <dt><a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure"><span class="typeNameLink">Character</span></a> - Class in <a href="edu/cscc/javaadventure/package-summary.html">edu.cscc.javaadventure</a></dt>
 <dd>
 <div class="block">Character in the JavaAdventure Role-Playing Game.</div>
@@ -120,6 +135,15 @@
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#Character-java.lang.String-java.lang.String-java.lang.Integer-java.lang.String-java.lang.Integer-java.lang.Integer-java.lang.Integer-java.lang.Integer-java.lang.Integer-java.lang.Integer-java.lang.Integer-java.lang.Double-">Character(String, String, Integer, String, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Double)</a></span> - Constructor for class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>
 <div class="block">Construct a full character.</div>
+</dd>
+<dt><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat"><span class="typeNameLink">CharacterCombatant</span></a> - Class in <a href="edu/cscc/javaadventure/engine/combat/package-summary.html">edu.cscc.javaadventure.engine.combat</a></dt>
+<dd>
+<div class="block">Represents a <a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat"><code>Combatant</code></a> which is backed by a <a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure"><code>Character</code></a>
+ in the JavaAdventure game.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#CharacterCombatant-edu.cscc.javaadventure.Character-">CharacterCombatant(Character)</a></span> - Constructor for class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Construct a CharacterCombatant.</div>
 </dd>
 <dt><a href="edu/cscc/javaadventure/ChestAlreadyOpenException.html" title="class in edu.cscc.javaadventure"><span class="typeNameLink">ChestAlreadyOpenException</span></a> - Exception in <a href="edu/cscc/javaadventure/package-summary.html">edu.cscc.javaadventure</a></dt>
 <dd>
@@ -141,8 +165,14 @@
 <dd>
 <div class="block">Closes the chest.</div>
 </dd>
+<dt><a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat"><span class="typeNameLink">Combatant</span></a> - Interface in <a href="edu/cscc/javaadventure/engine/combat/package-summary.html">edu.cscc.javaadventure.engine.combat</a></dt>
+<dd>
+<div class="block">This interface is used in combat situations in order to hide the
+ underlying implementations of the combatants.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#compareTo-edu.cscc.javaadventure.Character-">compareTo(Character)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#compareTo-edu.cscc.javaadventure.engine.combat.Combatant-">compareTo(Combatant)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Room.html#connectRoom-java.lang.String-edu.cscc.javaadventure.Room-">connectRoom(String, Room)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Room.html" title="class in edu.cscc.javaadventure">Room</a></dt>
 <dd>
 <div class="block">Connect the current Room to another Room in the given direction.</div>
@@ -177,12 +207,25 @@
 </dd>
 <dt><a href="edu/cscc/javaadventure/package-summary.html">edu.cscc.javaadventure</a> - package edu.cscc.javaadventure</dt>
 <dd>&nbsp;</dd>
+<dt><a href="edu/cscc/javaadventure/engine/package-summary.html">edu.cscc.javaadventure.engine</a> - package edu.cscc.javaadventure.engine</dt>
+<dd>&nbsp;</dd>
+<dt><a href="edu/cscc/javaadventure/engine/combat/package-summary.html">edu.cscc.javaadventure.engine.combat</a> - package edu.cscc.javaadventure.engine.combat</dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/JAObject.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Room.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Room.html" title="class in edu.cscc.javaadventure">Room</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#equipWeapon-edu.cscc.javaadventure.Weapon-">equipWeapon(Weapon)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Allows a combatant to equip a weapon for increased damage or other effects.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#equipWeapon-edu.cscc.javaadventure.Weapon-">equipWeapon(Weapon)</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Allows a combatant to equip a weapon for increased damage or other effects.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Lantern.html#extinguish--">extinguish()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Lantern.html" title="class in edu.cscc.javaadventure">Lantern</a></dt>
 <dd>
 <div class="block">Extinguishes the lantern.</div>
@@ -205,6 +248,14 @@
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#getAge--">getAge()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#getArmorClass--">getArmorClass()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Armor class represents the combatant's ability to defend themselves.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#getArmorClass--">getArmorClass()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Armor class represents the combatant's ability to defend themselves.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#getBackpack--">getBackpack()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#getCharisma--">getCharisma()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
@@ -241,8 +292,32 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#getHealth--">getHealth()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#getHealth--">getHealth()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Get the combatant's current health.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#getHealth--">getHealth()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Get the combatant's current health.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#getInitiative--">getInitiative()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Gets the current initiative of the combatant.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#getInitiative--">getInitiative()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Gets the current initiative of the combatant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#getIntelligence--">getIntelligence()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#getName--">getName()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Gets the name of the combatant.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#getName--">getName()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Gets the name of the combatant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/JAObject.html#getName--">getName()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Room.html#getName--">getName()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Room.html" title="class in edu.cscc.javaadventure">Room</a></dt>
@@ -266,6 +341,14 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/JAObject.html#getUuid--">getUuid()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#getWeapon--">getWeapon()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Gets the <a href="edu/cscc/javaadventure/Weapon.html" title="interface in edu.cscc.javaadventure"><code>Weapon</code></a> the combatant is currently equipped with.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#getWeapon--">getWeapon()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Gets the <a href="edu/cscc/javaadventure/Weapon.html" title="interface in edu.cscc.javaadventure"><code>Weapon</code></a> the combatant is currently equipped with.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Backpack.html#getWeight--">getWeight()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Backpack.html" title="class in edu.cscc.javaadventure">Backpack</a></dt>
 <dd>
 <div class="block">Calculates the total weight based on the contents of the backpack.</div>
@@ -286,6 +369,7 @@
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Character.html#hashCode--">hashCode()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Character.html" title="class in edu.cscc.javaadventure">Character</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#hashCode--">hashCode()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/JAObject.html#hashCode--">hashCode()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Room.html#hashCode--">hashCode()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Room.html" title="class in edu.cscc.javaadventure">Room</a></dt>
@@ -296,6 +380,20 @@
 </a>
 <h2 class="title">I</h2>
 <dl>
+<dt><a href="edu/cscc/javaadventure/engine/InvalidRollException.html" title="class in edu.cscc.javaadventure.engine"><span class="typeNameLink">InvalidRollException</span></a> - Exception in <a href="edu/cscc/javaadventure/engine/package-summary.html">edu.cscc.javaadventure.engine</a></dt>
+<dd>
+<div class="block">Exception thrown when a roll is outside of the acceptable bounds.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/InvalidRollException.html#InvalidRollException-java.lang.String-">InvalidRollException(String)</a></span> - Constructor for exception edu.cscc.javaadventure.engine.<a href="edu/cscc/javaadventure/engine/InvalidRollException.html" title="class in edu.cscc.javaadventure.engine">InvalidRollException</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#isActiveCombatant--">isActiveCombatant()</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Indicates if the combatant can still fight or not.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#isActiveCombatant--">isActiveCombatant()</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Indicates if the combatant can still fight or not.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/Lantern.html#isBroken--">isBroken()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/Lantern.html" title="class in edu.cscc.javaadventure">Lantern</a></dt>
 <dd>
 <div class="block">Indicates of the lantern is broken or not.</div>
@@ -409,12 +507,27 @@
 <dd>
 <div class="block">Opens the chest.</div>
 </dd>
+<dt><a href="edu/cscc/javaadventure/engine/combat/OpponentIncapacitatedException.html" title="class in edu.cscc.javaadventure.engine.combat"><span class="typeNameLink">OpponentIncapacitatedException</span></a> - Exception in <a href="edu/cscc/javaadventure/engine/combat/package-summary.html">edu.cscc.javaadventure.engine.combat</a></dt>
+<dd>
+<div class="block">Exception thrown during combat when a <a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat"><code>Combatant</code></a> has already
+ been incapacitated and can no longer fight.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/OpponentIncapacitatedException.html#OpponentIncapacitatedException--">OpponentIncapacitatedException()</a></span> - Constructor for exception edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/OpponentIncapacitatedException.html" title="class in edu.cscc.javaadventure.engine.combat">OpponentIncapacitatedException</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:R">
 <!--   -->
 </a>
 <h2 class="title">R</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html#receiveDamage-int-">receiveDamage(int)</a></span> - Method in class edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/CharacterCombatant.html" title="class in edu.cscc.javaadventure.engine.combat">CharacterCombatant</a></dt>
+<dd>
+<div class="block">Allows the combatant to take damage, which reduces their health.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/Combatant.html#receiveDamage-int-">receiveDamage(int)</a></span> - Method in interface edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat">Combatant</a></dt>
+<dd>
+<div class="block">Allows the combatant to take damage, which reduces their health.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/JAObject.html#removeDescriptionModifier-edu.cscc.javaadventure.ModifierName-">removeDescriptionModifier(ModifierName)</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></dt>
 <dd>
 <div class="block">Remove a description modifier entry from the modifiers.</div>
@@ -543,6 +656,12 @@
 </a>
 <h2 class="title">U</h2>
 <dl>
+<dt><a href="edu/cscc/javaadventure/engine/combat/UnableToWieldWeaponException.html" title="class in edu.cscc.javaadventure.engine.combat"><span class="typeNameLink">UnableToWieldWeaponException</span></a> - Exception in <a href="edu/cscc/javaadventure/engine/combat/package-summary.html">edu.cscc.javaadventure.engine.combat</a></dt>
+<dd>
+<div class="block">Exception thrown when a <a href="edu/cscc/javaadventure/engine/combat/Combatant.html" title="interface in edu.cscc.javaadventure.engine.combat"><code>fails to equip a two-handed weapon.</code></a></div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/engine/combat/UnableToWieldWeaponException.html#UnableToWieldWeaponException-java.lang.String-">UnableToWieldWeaponException(String)</a></span> - Constructor for exception edu.cscc.javaadventure.engine.combat.<a href="edu/cscc/javaadventure/engine/combat/UnableToWieldWeaponException.html" title="class in edu.cscc.javaadventure.engine.combat">UnableToWieldWeaponException</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cscc/javaadventure/TreasureChest.html#unlock--">unlock()</a></span> - Method in class edu.cscc.javaadventure.<a href="edu/cscc/javaadventure/TreasureChest.html" title="class in edu.cscc.javaadventure">TreasureChest</a></dt>
 <dd>
 <div class="block">Unlocks the chest.</div>
@@ -604,7 +723,8 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="edu/cscc/javaadventure/package-summary.html">Package</a></li>
+<li><a href="overview-summary.html">Overview</a></li>
+<li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
 <li><a href="deprecated-list.html">Deprecated</a></li>
