@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -233,35 +233,41 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#getObject-java.lang.String-">getObject</a></span>(java.lang.String&nbsp;name)</code>
+<div class="block">Retrieve an object by name.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../edu/cscc/javaadventure/Room.html" title="class in edu.cscc.javaadventure">Room</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#getRoom-java.lang.String-">getRoom</a></span>(java.lang.String&nbsp;direction)</code>
 <div class="block">Return the Room connected in the indicated direction or null
  if no Room exists in that direction.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.Set&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#listContents--">listContents</a></span>()</code>
 <div class="block">List the contents of this room.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#removeFromContents-java.lang.String-">removeFromContents</a></span>(java.lang.String&nbsp;name)</code>
 <div class="block">Remove an object from the contents of the room by name.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#setDescription-java.lang.String-">setDescription</a></span>(java.lang.String&nbsp;description)</code>
 <div class="block">Sets the base description.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../edu/cscc/javaadventure/Room.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
@@ -541,7 +547,7 @@ extends java.lang.Object</pre>
 <a name="removeFromContents-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>removeFromContents</h4>
 <pre>public&nbsp;<a href="../../../edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a>&nbsp;removeFromContents(java.lang.String&nbsp;name)</pre>
@@ -551,6 +557,22 @@ extends java.lang.Object</pre>
 <dd><code>name</code> - The name of the object to be removed.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Either the removed object, or null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getObject-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getObject</h4>
+<pre>public&nbsp;<a href="../../../edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure">JAObject</a>&nbsp;getObject(java.lang.String&nbsp;name)</pre>
+<div class="block">Retrieve an object by name.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the object to find.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../edu/cscc/javaadventure/JAObject.html" title="class in edu.cscc.javaadventure"><code>JAObject</code></a> that matches the name or null.</dd>
 </dl>
 </li>
 </ul>
