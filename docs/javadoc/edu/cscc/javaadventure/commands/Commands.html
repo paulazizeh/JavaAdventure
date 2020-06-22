@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9};
+var methods = {"i0":9,"i1":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -116,6 +116,25 @@ extends java.lang.Object</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.util.List&lt;java.lang.String&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../edu/cscc/javaadventure/commands/Commands.html#VALID_COMMANDS">VALID_COMMANDS</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -151,6 +170,10 @@ extends java.lang.Object</pre>
 <div class="block">Retrieve a <a href="../../../../edu/cscc/javaadventure/commands/Command.html" title="interface in edu.cscc.javaadventure.commands"><code>Command</code></a> based on a valid command string.</div>
 </td>
 </tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static java.util.Map&lt;java.lang.String,<a href="../../../../edu/cscc/javaadventure/commands/Command.html" title="interface in edu.cscc.javaadventure.commands">Command</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../edu/cscc/javaadventure/commands/Commands.html#getCommands--">getCommands</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -167,6 +190,23 @@ extends java.lang.Object</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="VALID_COMMANDS">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>VALID_COMMANDS</h4>
+<pre>public static&nbsp;java.util.List&lt;java.lang.String&gt; VALID_COMMANDS</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -193,7 +233,7 @@ extends java.lang.Object</pre>
 <a name="getCommand-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCommand</h4>
 <pre>public static&nbsp;<a href="../../../../edu/cscc/javaadventure/commands/Command.html" title="interface in edu.cscc.javaadventure.commands">Command</a>&nbsp;getCommand(java.lang.String&nbsp;command)</pre>
@@ -209,6 +249,15 @@ extends java.lang.Object</pre>
  does not exist return a command that prints "Not a valid command" and returns the <a href="../../../../edu/cscc/javaadventure/engine/GameState.html" title="class in edu.cscc.javaadventure.engine"><code>GameState</code></a>
  in its <a href="../../../../edu/cscc/javaadventure/commands/Command.html#execute-edu.cscc.javaadventure.engine.GameState-edu.cscc.javaadventure.commands.CommandPrinter-java.lang.String-"><code>Command.execute(GameState, CommandPrinter, String)</code></a> method.</dd>
 </dl>
+</li>
+</ul>
+<a name="getCommands--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getCommands</h4>
+<pre>public static&nbsp;java.util.Map&lt;java.lang.String,<a href="../../../../edu/cscc/javaadventure/commands/Command.html" title="interface in edu.cscc.javaadventure.commands">Command</a>&gt;&nbsp;getCommands()</pre>
 </li>
 </ul>
 </li>
@@ -264,13 +313,13 @@ extends java.lang.Object</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

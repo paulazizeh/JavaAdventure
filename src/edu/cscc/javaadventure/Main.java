@@ -1,5 +1,6 @@
 package edu.cscc.javaadventure;
 
+import edu.cscc.javaadventure.commands.AdditionalCommands;
 import edu.cscc.javaadventure.engine.GameEngine;
 import edu.cscc.javaadventure.engine.GameState;
 import edu.cscc.javaadventure.engine.combat.Goblin;
@@ -77,10 +78,9 @@ public class Main {
                 .filter(object -> object.name.equals("The One Ring"))
                 .findFirst()
                 .ifPresent(found -> System.out.println("Found: " + found.getName()));
+        AdditionalCommands.addCommands();
         System.out.println("Party size: " + party.size());
-
-        Room room = new Room("A dark room.", "You are likely to be eaten by a grue.");
-
+        Room room = GameMap.buildMap();
         try {
             TreasureChest treasureChest = new TreasureChest();
             treasureChest.unlock();
@@ -94,9 +94,6 @@ public class Main {
             e.printStackTrace();
         }
         room.addToContents(new Goblin());
-        Room hallway = new Room("hallway", "A cobweb strewn hallway.");
-        hallway.addToContents(new Lantern());
-        room.connectRoom(Room.SOUTH, hallway);
         GameState gameState = new GameState(party, room, true);
         while(gameState.isPlaying()) {
             System.out.println(gameState.getCurrentDescription());
