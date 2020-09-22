@@ -1,5 +1,7 @@
 package edu.cscc.javaadventure;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Character {
@@ -15,6 +17,16 @@ public class Character {
     private Integer wisdom;
     private Integer charisma;
     private Integer health;
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
+    }
+
+    private Backpack backpack;
 
     public Character() {
     }

@@ -1,5 +1,9 @@
 package edu.cscc.javaadventure;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * Represents a treasure chest in a role-playing game.
  * The treasure chst can be locked or unlocked, and open or unopened.
@@ -13,12 +17,14 @@ public class TreasureChest {
     private boolean open;
     private boolean locked;
 
+    private List<JAObject> chestContents;
+
     /**
      * Constructs a TreasureChest. A treasure chest has a default weight
      * and is locked and closed by default.
      */
     public TreasureChest() {
-        this.weight = 10.00;
+        this.chestContents = new ArrayList<>();
         this.locked = true;
     }
 
@@ -27,6 +33,12 @@ public class TreasureChest {
      * @return The weight of the treasure chest to a precision of two decimal places.
      */
     public double getWeight() {
+        Iterator<JAObject> chestContentsIterator = chestContents.iterator();
+        this.weight = 0;
+        while (chestContentsIterator.hasNext()) {
+            JAObject jaObject = chestContentsIterator.next();
+            this.weight += jaObject.getWeight();
+        }
         return weight;
     }
 
@@ -82,6 +94,26 @@ public class TreasureChest {
      */
     public void close() {
         this.open = false;
+    }
+
+    public boolean addObject(JAObject object) {
+        return chestContents.add(object);
+    }
+
+    public JAObject removeObject(String name) {
+        Iterator<JAObject> chestContentsIterator = chestContents.iterator();
+        while (chestContentsIterator.hasNext()) {
+            JAObject jaObject = chestContentsIterator.next();
+            if(jaObject.getName() .equals(name)) {
+                chestContents.remove(jaObject);
+                return jaObject;
+            }
+        }
+        return null;
+    }
+
+    public List<JAObject> getContents() {
+        return chestContents;
     }
 
     /**
