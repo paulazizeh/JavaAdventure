@@ -68,4 +68,23 @@ class PartyTest {
     public void itReturnsNullWhenItCannotFindAMemberByName() {
         assertNull(party.findMember("Gandalf"));
     }
+
+
+    @Test
+    void setRoom() {
+        Room room = new Room("Dark Room", "This is a dark room");
+        party.setRoom(room);
+        assertEquals(room, party.getRoom());
+    }
+
+    @Test
+    void move() {
+        Room room = new Room("Dark Room", "This is a dark room");
+        party.setRoom(room);
+        Room room2 = new Room("Dark Dungeon", "This is a dark dungeon");
+        party.setRoom(room);
+        room.connectRoom("EAST", room2);
+        party.move(Direction.EAST);
+        assertEquals(room2, party.getRoom());
+    }
 }
