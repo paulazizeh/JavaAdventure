@@ -7,12 +7,33 @@ import java.util.*;
  * Party can add, remove, find, and get members, as well as determining the size
  * of the party. Party members must have unique names.
  */
-public class Party {
+public class Party extends MovableObject {
     private HashMap<String, Character> members;
 
     public Party() {
         members = new HashMap<>();
     }
+
+    @Override
+    protected void setupDescriptionModifiers() {
+    }
+
+    @Override
+    public void setRoom(Room room) {
+        super.setRoom(room);
+        for (Character character : getMembers()) {
+            character.setRoom(room);
+        }
+    }
+
+    @Override
+    public void move(Direction direction) {
+        super.move(direction);
+        for (Character character : getMembers()) {
+            character.move(direction);
+        }
+    }
+
 
     /**
      * Adds a character as a member.

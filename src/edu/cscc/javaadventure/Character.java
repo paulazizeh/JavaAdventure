@@ -2,7 +2,7 @@ package edu.cscc.javaadventure;
 
 import java.util.Objects;
 
-public class Character extends JAObject {
+public class Character extends MovableObject {
 
     private Integer age;
     private String gender;
@@ -15,6 +15,7 @@ public class Character extends JAObject {
     private Integer health;
 
     public Character() {
+        super();
     }
 
     public Character(String name) {
