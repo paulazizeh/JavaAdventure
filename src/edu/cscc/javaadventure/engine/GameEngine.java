@@ -1,6 +1,7 @@
 package edu.cscc.javaadventure.engine;
 
 import edu.cscc.javaadventure.commands.CommandPrinter;
+import edu.cscc.javaadventure.commands.Commands;
 
 /**
  * GameEngine.tick is a function which gets a command from the user and executes the command
@@ -8,6 +9,8 @@ import edu.cscc.javaadventure.commands.CommandPrinter;
  * to the {@link edu.cscc.javaadventure.commands.Command} object to be executed if the command fails.
  */
 public interface GameEngine {
+
+
 
     /**
      * Advance the game forward by creating a new GameState.
@@ -18,6 +21,6 @@ public interface GameEngine {
      */
     static GameState tick(GameState gameState, GetUserCommand getUserCommand, CommandPrinter commandPrinter) {
         //TODO Complete this method per the requirements
-        return null;
+        return Commands.getCommand(getUserCommand.getCommand()).execute(gameState, commandPrinter, getUserCommand.getCommand());
     }
 }
